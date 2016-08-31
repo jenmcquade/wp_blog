@@ -512,7 +512,9 @@
                      }                                          
                      data += alm_template(result);                                          
                   });                  
-                  alm.AjaxLoadMore.success(data, true); // Send data to alm object                                   
+                  alm.AjaxLoadMore.success(data, true); // Send data to alm object   
+                  jQuery('.alm-reveal').masonry();
+                                   
                }               
             });           
          }
@@ -1419,6 +1421,7 @@
             var matchUrl = /url\(\s*(['"]?)(.*?)\1\s*\)/g;
 
             if (waitForAll) {
+            	
 
                 // Get all elements (including the original), as any one of
                 // them could have a background image.
@@ -1536,3 +1539,4 @@
 
     };
 }));
+
